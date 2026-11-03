@@ -5,7 +5,6 @@ Atlas exposes a manifest-driven public proof layer for crawlers, reviewers, and 
 ## Canonical Public Contract
 
 - Public data catalog: https://atlas.freedomcore.io/datasets/
-- Authority manifest: https://atlas.freedomcore.io/datasets/atlas-authority-manifest.json
 - Current version: `20260612-22b666eeb28f`
 - Content hash: `22b666eeb28f2d176bb8e1b083d5075b2c34dd0f327ece949fd13d08e5d09aa3`
 - Generated at: `2026-06-12T19:46:33Z`
@@ -20,13 +19,9 @@ Atlas exposes a manifest-driven public proof layer for crawlers, reviewers, and 
 
 ## Machine Outputs
 
-- Authority manifest JSON: https://atlas.freedomcore.io/datasets/atlas-authority-manifest.json
-- Dataset sitemap XML: https://atlas.freedomcore.io/datasets/sitemap.xml
-- Symbol updates RSS: https://atlas.freedomcore.io/feeds/atlas-symbol-updates.xml
+- Sitemap index XML: https://atlas.freedomcore.io/sitemap-index.xml
 - Symbol coverage JSON: https://atlas.freedomcore.io/datasets/atlas-symbol-coverage/atlas-symbol-coverage.json
 - Symbol coverage CSV: https://atlas.freedomcore.io/datasets/atlas-symbol-coverage/atlas-symbol-coverage.csv
-- Market pulse JSON: https://atlas.freedomcore.io/datasets/atlas-market-pulse/atlas-market-pulse.json
-- Security posture JSON: https://atlas.freedomcore.io/datasets/atlas-security-posture/atlas-security-posture.json
 
 ## Adaptive Rules
 
@@ -39,7 +34,7 @@ Atlas exposes a manifest-driven public proof layer for crawlers, reviewers, and 
 ## Provenance
 
 - builder: /root/FreedomCore_Tools/python/atlas_authority_assets.py
-- stock_sitemap: https://atlas.freedomcore.io/stocks/sitemap.xml
+- sitemap_index: https://atlas.freedomcore.io/sitemap-index.xml
 - daily_context_cache: /root/Atlas_Backend/cache/daily_contexts
 - market_pulse: https://atlas.freedomcore.io/stocks/atlas-pulse.json
 - github_mirror: https://github.com/freedomcoreai-lang/maverick/blob/main/docs/atlas-public-data-authority.md
