@@ -1,131 +1,53 @@
-# MAVERICK
+<p align="center">
+  <a href="https://atlas.freedomcore.io/"><img src="https://raw.githubusercontent.com/freedomcoreai-lang/freedomcoreai-lang/main/assets/atlas-banner.png" alt="FreedomCore Atlas" width="100%"></a>
+</p>
 
-A self-evolving AI trading organism. Built in public. Published open.
+# FreedomCore Atlas
 
-**Live site:** [freedomcore.io](https://freedomcore.io)
-**Twitter:** [@freedomcoreai](https://x.com/freedomcoreai)
-**Chain:** Base (Coinbase L2)
+**[atlas.freedomcore.io](https://atlas.freedomcore.io/)** is a global stock and crypto research engine. It covers 6,394 listings: 4,875 equities on 59 exchanges in 53 countries, 1,500 crypto assets, plus indices, commodities and FX. Every price, profile and research note is checked against its source and dated, and anything that fails a check is held rather than guessed.
 
----
-
-## Latest activity
-
-**Last updated: 2026-05-19**
-
-This repo ships changes constantly. The section below reflects the most recent public-facing state — recent commits, live surfaces, and where to read the deep architecture.
-
-**Recent commits (this week):**
-
-| Date | Commit | Summary |
-|---|---|---|
-| 2026-05-19 | `84542dd` | API key rotation hygiene |
-| 2026-05-19 | `a024056` | Weekly reports + sitemap + tokens refresh |
-| 2026-05-19 | `6311b01` | Daily notes pipeline — May 16/18/19 |
-| 2026-05-19 | `f5ac3f2` | Site pages — atlas + confluence + traditoo + Pumphouse |
-| 2026-05-19 | `d4b135b` | Framework — atlas / fusion-core / shadow / arena |
-
-**Live public surfaces:**
-
-| URL | Surface |
-|---|---|
-| [freedomcore.io](https://freedomcore.io) | Main site + dashboard |
-| [maverick.freedomcore.io](https://maverick.freedomcore.io) | Trading organism |
-| [shadow.freedomcore.io](https://shadow.freedomcore.io) | Copy-trade lens |
-| [arena.freedomcore.io](https://arena.freedomcore.io) | Public wallet leaderboard |
-| [memes.freedomcore.io](https://memes.freedomcore.io) | Pumphouse — Solana memecoin tracker |
-| [atlas.freedomcore.io](https://atlas.freedomcore.io) | Atlas — market context |
-
-For the full architecture story, see [freedomcore.io/pages/architecture.html](https://freedomcore.io/pages/architecture.html). For the LLM swarm terminals in real time, see [maverick.freedomcore.io/pages/swarm.html](https://maverick.freedomcore.io/pages/swarm.html). For the security posture and A+ grades, see [/pages/security.html](https://freedomcore.io/pages/security.html).
-
-## Atlas public data and authority
-
-Atlas publishes a crawlable public-data and provenance surface. These are ordinary links for discovery, citation, and verification, not a paid-link scheme:
-
-- Public data catalog: [atlas.freedomcore.io/datasets/](https://atlas.freedomcore.io/datasets/)
-- Authority index, every asset in one place: [atlas.freedomcore.io/datasets/authority/](https://atlas.freedomcore.io/datasets/authority/)
-- Symbol coverage index: [atlas.freedomcore.io/datasets/atlas-symbol-coverage/](https://atlas.freedomcore.io/datasets/atlas-symbol-coverage/)
-- Market pulse dataset: [atlas.freedomcore.io/datasets/atlas-market-pulse/](https://atlas.freedomcore.io/datasets/atlas-market-pulse/)
-- Security posture evidence: [atlas.freedomcore.io/datasets/atlas-security-posture/](https://atlas.freedomcore.io/datasets/atlas-security-posture/)
-- Provenance note: [docs/atlas-public-data-authority.md](docs/atlas-public-data-authority.md)
+[![Site](https://img.shields.io/badge/Site-atlas.freedomcore.io-0284c7)](https://atlas.freedomcore.io/)
+[![Open data](https://img.shields.io/badge/Open_data-CC_BY_4.0-d97706)](https://atlas.freedomcore.io/datasets/)
+[![Hugging Face](https://img.shields.io/badge/Hugging_Face-freedomcoreai-ffcc4d)](https://huggingface.co/freedomcoreai)
+[![Kaggle](https://img.shields.io/badge/Kaggle-atlasfreedomcoreio-20beff)](https://www.kaggle.com/atlasfreedomcoreio)
 
 ---
 
-## What this repository is
+## What you'll find on Atlas
 
-Everything in this repo is the public face of MAVERICK:
+| Surface | What it does |
+| :-- | :-- |
+| [Symbol pages](https://atlas.freedomcore.io/stocks/) | One page per listing, for example [Toyota (TSE:7203)](https://atlas.freedomcore.io/stocks/7203/) or [Bitcoin](https://atlas.freedomcore.io/stocks/BTC/). Each has its price with the time it was observed, a verified company profile, a chart and source-cited research. |
+| [Atlas Quakes](https://atlas.freedomcore.io/quakes/) | Source-dated company and protocol developments as they happen. |
+| [Daily Notes](https://atlas.freedomcore.io/notes/daily/) | Daily research editions, each tied to its sources. |
+| [Atlas Studio](https://atlas.freedomcore.io/studio/) | Audio and video market briefings. |
+| [Research workstation](https://atlas.freedomcore.io/workstation/) | Interactive research desk with source citations. |
+| [Economic calendar](https://atlas.freedomcore.io/economic-calendar/) | Upcoming macro releases and events. |
+| [Open datasets](https://atlas.freedomcore.io/datasets/) | The full listing register as free CSV/JSON. |
+| [Methodology](https://atlas.freedomcore.io/methodology/) · [Security](https://atlas.freedomcore.io/security/) | How sources are admitted, and the public controls you can check yourself. |
 
-- **`/site`** - The complete source of [freedomcore.io](https://freedomcore.io). Static HTML, vanilla CSS, vanilla JS. Zero framework. Zero build step. Every scroll, every tier card, every indicator panel on the live dashboard - it's in here.
-- **`/contract`** - The full `MAV.sol` ERC-20 contract deployed to Base. Fixed 1B supply, minting permanently disabled at deploy. Verifiable byte-for-byte on BaseScan once live.
-- **`/docs`** - Step-by-step launch runbooks. The exact commands that take the contract from written to deployed, liquidity seeded, and LP locked for 24 months.
+## How Atlas keeps its data accurate
 
-## What this repository is NOT
+- **Exact listings, not bare tickers.** Every listing is keyed `EXCHANGE:TICKER`. "SOL" is Solana, but it's also four different listed companies, and Atlas keeps them apart (330 tickers in the register are shared by more than one instrument).
+- **Prices are checked against the exchange's own calendar.** Each exchange is wired in one at a time, using trading hours and holidays taken from the exchange's published notices. A price only counts as *live* if it's current for that exchange's session and its currency, venue and company identity all match.
+- **Held, never guessed.** If a check fails, the page says the price is held or stale instead of showing a number it can't stand behind. Unknown never means delisted.
+- **Everything is dated.** Prices, profiles and research each carry the time they were observed, so you can always see how fresh a figure is.
+- **Built and reviewed by an AI team.** Atlas is built by a small team of AI collaborators (Codex, Gemini and Claude) on FreedomCore's own servers. Each change is independently reviewed by another member before it goes live.
 
-The trading brain is not in here. The live bot, the 1000-generation swarm that rewrites it, the champion codebase, the data pipeline, the forensic crime-scene logs - all of that stays private. That's the edge. Publishing the AI's internal mutations would let anyone front-run us within 48 hours.
+## Open data
 
-What's published is the shopfront and the token contract. Anyone can inspect both, fork them, run their own copy. Nothing tracks you here. Nothing phones home. Nothing needs trusting that you can't verify yourself.
+The listing register is published daily under **CC BY 4.0**. It shows, for every listing, whether its price is live, and which profile, research and chart layers exist.
 
-## Canonical MAV contract
+- **Hugging Face:** [freedomcoreai/atlas-symbol-coverage](https://huggingface.co/datasets/freedomcoreai/atlas-symbol-coverage) · search it in the [Atlas Symbol Explorer](https://huggingface.co/spaces/freedomcoreai/atlas-symbol-explorer)
+- **Kaggle:** [atlasfreedomcoreio/atlas-symbol-coverage](https://www.kaggle.com/datasets/atlasfreedomcoreio/atlas-symbol-coverage) · analysis notebook: [Market data freshness audit](https://www.kaggle.com/code/atlasfreedomcoreio/market-data-freshness-audit-6-394-listings)
+- **GitHub:** [freedomcore-datasets](https://github.com/freedomcoreai-lang/freedomcore-datasets)
+- **Zenodo (citable archive):** [10.5281/zenodo.20717847](https://doi.org/10.5281/zenodo.20717847)
+- **Provenance note:** [docs/atlas-public-data-authority.md](docs/atlas-public-data-authority.md)
 
-```
-Chain:      Base (chain ID 8453)
-Contract:   0xTBD_AFTER_DEPLOYMENT
-BaseScan:   https://basescan.org/token/0xTBD
-Aerodrome:  https://aerodrome.finance/swap?from=eth&to=0xTBD
-LP locked:  https://team.finance/view-coin/0xTBD (24 months)
-```
+## Contact
 
-**Any other contract address pretending to be $MAV is a fraud.** The real one ships from this repo, verifiable byte-for-byte on BaseScan.
+For partnerships, licensing or questions about the data: [freedomcoreai@gmail.com](mailto:freedomcoreai@gmail.com)
 
-## Access tiers
+Atlas is research. Nothing here is financial advice, and Atlas doesn't execute trades.
 
-$MAV is a utility access token. It does not grant equity, dividends, or any share of trading profit. It gates access to the [freedomcore.io](https://freedomcore.io) dashboard.
-
-| Tier | Hold $MAV | Card Alt | Annual Alt | Access |
-|---|---|---|---|---|
-| **Spectator** | — | free | free | Marketing site, security audit, public roadmap, launch story, historical performance |
-| **Observer** | 1,000 (free pre-launch) | free with wallet | free with wallet | Live champion card (read-only), Hall of Fame archive, **1-hour daily preview** of swarm evolution feed, wallet-tracked identity ready to upgrade |
-| **Signal** | 2,000 | $29 / mo | $232 / yr | Everything above + real-time trade signals, entry/exit/stop alerts, engine + symbol filtering, weekly swarm vote |
-| **Pro** | 7,500 | $79 / mo | $632 / yr | Everything above + **unlimited swarm evolution feed**, **AI agent intelligence chain**, weekly DNA mutation deep-dives, multi-channel alert routing |
-| **Sovereign** ⭐ | 20,000 | $199 / mo | $1,592 / yr | Everything above + **copy-trading webhook (full autonomy)**, REST API, custom risk overrides, weighted architecture vote, white-glove onboarding |
-
-Token-holders and card-subscribers land in the same tier system. Pick whichever rail fits. Annual saves 33% on either.
-
-Pricing reflects 12-platform competitor research (Cryptohopper, 3Commas, Token Metrics, Nansen, Messari, CryptoQuant, Bybit/Bitget copy trading, TradingView). Prosumer ceiling for self-serve crypto tooling is ~$200/mo; we set Sovereign at $199 deliberately. Copy-trading is in **Pro** (the middle tier 60-70% of buyers pick), not gated behind Sovereign.
-
-## Security
-
-The live site is independently graded **A+** by:
-- [Mozilla Observatory](https://observatory.mozilla.org/analyze/freedomcore.io)
-- [SecurityHeaders.com](https://securityheaders.com/?q=freedomcore.io&followRedirects=on)
-- [SSL Labs](https://www.ssllabs.com/ssltest/analyze.html?d=freedomcore.io)
-
-Full 13-month hardening timeline lives on the site at [/pages/security.html](https://freedomcore.io/pages/security.html).
-
-### About the `FC_API_KEY` string in the source
-
-You will see `fcweb_RETIRED_KEY_ROTATED_20260514` hardcoded in several JS files. **This is intentional and not a leak.** It is a public CSRF-style bot-bouncer, shipped in plaintext to every browser that loads freedomcore.io. Anyone can grab it from view-source. Its only job is to filter out the most casual scraping. Real API protection lives in nginx (rate limiting, origin pinning, method whitelisting, and per-route gating). Automated secret scanners will flag it; the `.gitguardian.yml` at the repo root marks it as a known false positive.
-
-## Not financial advice
-
-MAVERICK is an experimental AI system. It may lose money. It may crash. It may be switched off. Holders are paying for coverage of a live experiment - nothing else. No equity. No dividends. No share of trading profits. No guaranteed return. Crypto is volatile. $MAV can go to zero. Only participate with capital you can afford to lose entirely.
-
-## Hardening
-
-- Contract ownership renounced at deploy
-- Minting permanently disabled at constructor
-- Liquidity pool locked for 24 months (Team.Finance)
-- Team allocation vests 24 months on-chain (Sablier)
-- Every treasury movement publicly verifiable on BaseScan
-- Strict Content Security Policy on the site - no inline scripts, no third-party JS loaded without a self-hosted copy
-- Every API endpoint rate-limited and header-gated
-
-## License
-
-Website source: MIT. Fork it, learn from it, do whatever you want.
-Smart contract: MIT.
-
-## Author
-
-Built solo by [@freedomcoreai](https://x.com/freedomcoreai) from a phone, on a motorway, over 13 months. Driving a chemical tanker by day, directing two AI agents (Gemini 3.1 + Claude 4.7) to write the production code by night.
-
-The long version is at [freedomcore.io/pages/about.html](https://freedomcore.io/pages/about.html).
+<sub>This repository previously held the earlier FreedomCore site and token materials. Those files remain in `/site`, `/contract` and `/docs` as an archive; they are not part of Atlas.</sub>
