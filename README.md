@@ -46,7 +46,6 @@ Atlas publishes a crawlable public-data and provenance surface. These are ordina
 - Symbol coverage index: [atlas.freedomcore.io/datasets/atlas-symbol-coverage/](https://atlas.freedomcore.io/datasets/atlas-symbol-coverage/)
 - Market pulse dataset: [atlas.freedomcore.io/datasets/atlas-market-pulse/](https://atlas.freedomcore.io/datasets/atlas-market-pulse/)
 - Security posture evidence: [atlas.freedomcore.io/datasets/atlas-security-posture/](https://atlas.freedomcore.io/datasets/atlas-security-posture/)
-- Authority manifest JSON: [atlas.freedomcore.io/datasets/atlas-authority-manifest.json](https://atlas.freedomcore.io/datasets/atlas-authority-manifest.json)
 - Provenance note: [docs/atlas-public-data-authority.md](docs/atlas-public-data-authority.md)
 
 ---
