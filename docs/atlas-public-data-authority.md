@@ -14,7 +14,7 @@ Atlas exposes a manifest-driven public proof layer for crawlers, reviewers, and 
 ## Dataset Landing Pages
 
 - Atlas Symbol Coverage Index: https://atlas.freedomcore.io/datasets/atlas-symbol-coverage/ (version `20260612-22b666eeb28f`, hash `39c1bbcd00ed`)
-- Atlas Market Pulse Dataset: https://atlas.freedomcore.io/datasets/atlas-market-pulse/ (version `20260612-22b666eeb28f`, hash `ad18cc1ca818`)
+- Atlas Quakes: https://atlas.freedomcore.io/quakes/ (live page of source-dated market developments; dated editions at `/quakes/YYYY-MM-DD/` since 2026-10-29, first edition https://atlas.freedomcore.io/quakes/2026-10-29/; archive of earlier editions to 17 August 2026: https://github.com/freedomcoreai-lang/freedomcore-datasets/tree/main/atlas-quakes-archive and https://huggingface.co/datasets/freedomcoreai/atlas-quakes-archive)
 - Atlas Security Posture Evidence: https://atlas.freedomcore.io/datasets/atlas-security-posture/ (version `20260612-22b666eeb28f`, hash `36edc602c944`)
 
 ## Machine Outputs
@@ -36,7 +36,7 @@ Atlas exposes a manifest-driven public proof layer for crawlers, reviewers, and 
 - builder: /root/FreedomCore_Tools/python/atlas_authority_assets.py
 - sitemap_index: https://atlas.freedomcore.io/sitemap-index.xml
 - daily_context_cache: /root/Atlas_Backend/cache/daily_contexts
-- market_pulse: https://atlas.freedomcore.io/stocks/atlas-pulse.json
+- quakes_feed: https://atlas.freedomcore.io/feeds/atlas-quakes.xml
 - github_mirror: https://github.com/freedomcoreai-lang/maverick/blob/main/docs/atlas-public-data-authority.md
 
 ## Search Policy
