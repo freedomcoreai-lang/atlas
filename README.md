@@ -46,6 +46,12 @@
 - **Zenodo (citable archive):** [10.5281/zenodo.20717847](https://doi.org/10.5281/zenodo.20717847)
 - **Provenance note:** [docs/atlas-public-data-authority.md](docs/atlas-public-data-authority.md)
 
+## Sample Dossiers, Founding 100 & Source Verification Bounty
+
+- **Inspect unredacted Supreme V12 PDF Dossiers (zero login):** [https://atlas.freedomcore.io/examples/](https://atlas.freedomcore.io/examples/) — full Dark & Light 12-page reference editions with inline primary-source and filing provenance.
+- **Founding 100 Cohort:** Early researchers who create a free account at [https://atlas.freedomcore.io/free-account/](https://atlas.freedomcore.io/free-account/) and email [support@freedomcore.io](mailto:support@freedomcore.io) with 2 tickers receive **2 custom Supreme V12 PDF dossiers free** (no card required). UK Atlas Pro buyers can also apply promo code `FOUNDING100` for **50% off the first 3 months** (52-market promo unlock rolling out next).
+- **Atlas Source Verification Bounty:** Spot a broken filing link, stale unflagged quote, cross-exchange ticker collision error, or PDF chart defect? Email the URL, `listing_key`, and observed defect to [support@freedomcore.io](mailto:support@freedomcore.io) — every verified catch ships in a numbered audited release (`R##`) and earns free dossiers or Pro passes.
+
 ## Contact
 
 For licensing, partnerships or questions about the data: [support@freedomcore.io](mailto:support@freedomcore.io)
